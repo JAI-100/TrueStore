@@ -1,0 +1,182 @@
+[
+  {
+    "facility_name": "U-Haul North Lincoln",
+    "facility_url": "https://www.uhaul.com/Locations/Self-Storage-near-Lincoln-NE-68521/730073/",
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "StorageMart Cornhusker",
+    "facility_url": "https://www.storage-mart.com/lincoln/68507-cornhusker-hwy",
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "Big Red Self Storage Van Dorn",
+    "facility_url": "https://www.bigredselfstorage.com/locations/van-dorn",
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "Big Red Self Storage 46th",
+    "facility_url": "https://www.bigredselfstorage.com/locations/46th-street",
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "Dino's Storage",
+    "facility_url": "https://www.dinosstorage.com",
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "FreeUp Storage Cotner",
+    "facility_url": "https://www.freeupstorage.com/self-storage/nebraska/lincoln/700-n-cotner-blvd",
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "FreeUp Storage N 1st",
+    "facility_url": "https://www.freeupstorage.com/self-storage/nebraska/lincoln/1909-n-1st-st",
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "Superior Street Storage",
+    "facility_url": "https://www.superiorstreetstoragelincoln.com",
+    "error": "Could not fetch website",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "Lincoln Self Storage",
+    "facility_url": "https://www.lincolnselfstorage.com",
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "Dillon Self Storage",
+    "facility_url": "https://www.dillonselfstorage.com",
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "Spare Room Storage",
+    "facility_url": "https://www.spareroomstorage.com",
+    "error": "Could not fetch website",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "Eagle's Nest Self Storage",
+    "facility_url": "https://www.eaglesnestselfstorage.com",
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "Five Star Storage Cornhusker",
+    "facility_url": "https://www.fivestarstorage.biz/locations/nebraska/lincoln/five-star-storage-cornhusker-hwy/",
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "Five Star Storage Pioneers",
+    "facility_url": "https://www.fivestarstorage.biz/locations/nebraska/lincoln/five-star-storage-pioneers-blvd/",
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "Budget Storage Pioneers",
+    "facility_url": "https://www.budgetstorage.com/lincoln-ne",
+    "error": "Could not fetch website",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "Mammoth Mega Storage",
+    "facility_url": "https://www.mammothstorage.com",
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "Sasquatch Self Storage",
+    "facility_url": "https://www.sasquatchselfstorage.com",
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "Kiss Self Storage",
+    "facility_url": "https://www.kissselfstorage.com",
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "Aardvark Self Storage",
+    "facility_url": "https://www.aardvarkselfstorage.com",
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "Northwest Storage",
+    "facility_url": "https://www.northweststoragelincoln.com",
+    "error": "Could not fetch website",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "U-Haul 48th and Vine",
+    "facility_url": "https://www.uhaul.com/Locations/Self-Storage-near-Lincoln-NE-68504/730063/",
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "Always Safe Storage",
+    "facility_url": "https://www.alwayssafestorage.com",
+    "error": "Could not fetch website",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "Capitol City Mini Storage",
+    "facility_url": "https://www.capitolcityministorage.com",
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "Cornhusker Self Storage",
+    "facility_url": "https://www.cornhuskerselfstorage.com",
+    "error": "Could not fetch website",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "By-Pass Storage",
+    "facility_url": "https://www.bypassstorage.com",
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "A Economy Self Storage",
+    "facility_url": "https://www.aeconomyselfstorage.com",
+    "error": "Could not fetch website",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "A Kimco Self Storage",
+    "facility_url": "https://www.kimcoselfstorage.com",
+    "error": "Could not fetch website",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "C and G Stor-Away",
+    "facility_url": "https://www.candgstorage.com",
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "Tower View Mini Storage",
+    "facility_url": "https://www.towerviewministorage.com",
+    "error": "Could not fetch website",
+    "transparency_score": null
+  },
+  {
+    "facility_name": "Stor-It 4 Less",
+    "facility_url": "https://www.storit4less.com",
+    "error": "Could not fetch website",
+    "transparency_score": null
+  }
+]

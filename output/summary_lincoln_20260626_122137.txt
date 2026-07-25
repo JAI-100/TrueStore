@@ -1,0 +1,319 @@
+TrueStore Lincoln NE — Run: 20260626_122137
+============================================================
+
+RANKED BY TRANSPARENCY (highest = most honest pricing)
+------------------------------------------------------------
+
+[8/10] U-Haul North Lincoln
+  URL: https://www.uhaul.com/Locations/Self-Storage-near-Lincoln-NE-68521/730073/
+  Promo Rate: 1 Month Free with a one-way truck or trailer reservation; 1-Year Price Lock (monthly price remains the same for first 12 months)
+  Ongoing Rate Disclosed: YES
+  Smallest Unit: 5x5 @ 69.95/mo
+  Price Lock: YES - 1-Year Price Lock: monthly price remains the same for first 12 months
+  Admin Fee: $0.00
+  Insurance Required: NO — Cost: NOT FOUND
+  Credit Card Fee: NOT FOUND
+  Climate Control: YES
+  Access Hours: Monday-Sunday 5:00 AM - 10:00 PM
+  Rate Increase Policy: 1-Year Price Lock guarantees no rate change for first 12 months; no language about what happens after 12 months
+  RED FLAGS: ['1-Year Price Lock implies rates CAN increase after 12 months but no disclosure of what rate increases may look like post-lock period', '1 Month Free offer requires a one-way truck or trailer reservation — conditional promotion not prominently disclosed upfront', "Insurance listed as 'low cost insurance available' but no pricing provided", "Portable storage unit (5x8) shows 'Rate: Per Month' with no dollar amount — price is missing entirely"]
+  Notes: Overall one of the more transparent storage operators reviewed. All standard unit prices are clearly listed. No deposit and no admin fee are explicitly confirmed at $0. The 1-Year Price Lock is a meaningful consumer protection but shoppers should be aware rates may increase after month 12 with no stated cap or notice policy. The '1 Month Free' promotion is conditional on a qualifying truck/trailer rental, which is a meaningful caveat. Insurance is available but cost is not disclosed on this page. The 5x8 portable storage unit has no price listed — consumers should inquire directly.
+
+[8/10] U-Haul 48th and Vine
+  URL: https://www.uhaul.com/Locations/Self-Storage-near-Lincoln-NE-68504/730063/
+  Promo Rate: 1 month free with a one-way truck or trailer reservation; 1-Year Price Lock (monthly price remains the same for first 12 months)
+  Ongoing Rate Disclosed: YES
+  Smallest Unit: 5x10 @ 104.95/mo
+  Price Lock: YES – 1-Year Price Lock: monthly price remains the same for the first 12 months
+  Admin Fee: $0.00
+  Insurance Required: NOT FOUND — Cost: NOT FOUND
+  Credit Card Fee: NOT FOUND
+  Climate Control: NO
+  Access Hours: Monday–Sunday 5 am – 10 pm
+  Rate Increase Policy: 1-Year Price Lock guarantees rate for first 12 months; no explicit language about what happens after 12 months
+  RED FLAGS: ['Price lock is limited to first 12 months only — no disclosure of what rate changes may occur after the lock period expires', "'Ask about our 1 month free' offer is conditional on a one-way truck or trailer reservation, not a standalone storage promotion — conditions not fully detailed on page", 'SafeStor Protection mentioned as available but cost and whether it is required is not disclosed']
+  Notes: This is a U-Haul facility with strong baseline transparency: all unit prices are clearly listed, no deposit or admin fee, and a 1-year price lock is prominently advertised. The main consumer concern is the absence of any disclosure about pricing after the 12-month price lock expires — rates could increase significantly at that point. No climate-controlled units appear to be available at this location based on the scraped text. Insurance (SafeStor Protection) is mentioned as a feature but cost and whether it is mandatory are not stated. Free lock ($11.95 value) is included with Rent Now online move-in.
+
+[6/10] Five Star Storage Cornhusker
+  URL: https://www.fivestarstorage.biz/locations/nebraska/lincoln/five-star-storage-cornhusker-hwy/
+  Promo Rate: Up to 50% off first 3 months (varies by unit size; some units get 25% off 2 months)
+  Ongoing Rate Disclosed: YES
+  Smallest Unit: 5x5 @ 27/mo
+  Price Lock: NOT FOUND
+  Admin Fee: NOT FOUND
+  Insurance Required: NOT FOUND — Cost: NOT FOUND
+  Credit Card Fee: NOT FOUND
+  Climate Control: NO
+  Access Hours: 7:00am - 9:00pm
+  Rate Increase Policy: NOT FOUND
+  RED FLAGS: ["Promo rates prominently displayed in large font while ongoing 'Starting at' rates are shown smaller and secondary", "Phrase 'Starting at' for ongoing rates implies prices may be higher than listed", "Some units labeled 'Web Rate' with no promo — unclear if web rate is the actual ongoing rate or a separate discount tier", 'No information on what rate applies after the promotional period ends or how rates may change', 'No disclosure of any fees (admin, insurance, deposits) that could increase true cost', "One review mentions being nearly arrested for accessing a '24 hour unit' at 6:30am, suggesting advertised access hours may not be consistently enforced or clearly communicated"]
+  Notes: The facility does show ongoing 'Starting at' rates alongside promo rates, which is a positive transparency practice. However, 'Starting at' language leaves room for prices to be higher. Two different discount structures exist (50% off 3 months vs. 25% off 2 months) depending on unit, which could confuse consumers. No climate-controlled units appear available at this location. Parking/vehicle storage is available (uncovered). No information found on insurance requirements, admin fees, or deposits. A customer review raises a concern about inconsistent enforcement of access hours.
+
+[6/10] Five Star Storage Pioneers
+  URL: https://www.fivestarstorage.biz/locations/nebraska/lincoln/five-star-storage-pioneers-blvd/
+  Promo Rate: Up to 50% Off First 2 Months; specific promo rates: 5x10 $26/mo, 10x10 $55/mo, 10x20 parking $47/mo, 10x20 drive-up $131/mo, 11x30 parking $44/mo, 12x40 parking $47/mo, 10x60 parking $59/mo (25% or 50% off for 2 months depending on unit)
+  Ongoing Rate Disclosed: YES
+  Smallest Unit: 5x10 @ 52/mo
+  Price Lock: NOT FOUND
+  Admin Fee: NOT FOUND
+  Insurance Required: NOT FOUND — Cost: NOT FOUND
+  Credit Card Fee: NOT FOUND
+  Climate Control: NO
+  Access Hours: 5:00am - 10:00pm
+  Rate Increase Policy: NOT FOUND
+  RED FLAGS: ["Promo rates prominently displayed in large font while ongoing 'Starting at' rates are shown smaller — could mislead casual browsers", 'No rate increase policy disclosed after promotional period ends', 'No information on admin fees, insurance requirements, or security deposit', 'No price lock or rate guarantee mentioned', 'Customer review mentions unexpected $90 in fees added (tow fees, auction fees) suggesting undisclosed fee practices', "Another review mentions feeling 'ripped off,' suggesting pricing or fee disputes", 'No onsite office — management is offsite, which may complicate dispute resolution']
+  Notes: This facility does show ongoing 'Starting at' rates alongside promo rates, which is a positive transparency practice. However, several units listed as 'Web Rate' with no promo (e.g., 10x16 at $164, 10x30 at $224) have no promotional discount disclosed, and it is unclear if those are ongoing or introductory rates. No climate-controlled units appear to be available at this location despite the website copy mentioning 'climate-controlled storage units' — all listed units are labeled Non-Climate. The facility has no onsite office; the rental office is located 6.6 miles away at 5350 Cornhusker Hwy. Consumer reviews raise concerns about unexpected fees being added to accounts. No mention of insurance requirements, admin fees, or deposit, which are common hidden costs consumers should ask about before renting.
+
+[3/10] StorageMart Cornhusker
+  URL: https://www.storage-mart.com/lincoln/68507-cornhusker-hwy
+  Promo Rate: NOT FOUND
+  Ongoing Rate Disclosed: NO
+  Smallest Unit: 5x5 @ 55.0/mo
+  Price Lock: NOT FOUND
+  Admin Fee: NOT FOUND
+  Insurance Required: NOT FOUND — Cost: NOT FOUND
+  Credit Card Fee: 2.5% processing fee added to all credit card payments; no fee for ACH bank transfer
+  Climate Control: YES
+  Access Hours: Closes at 10:00 PM (access hours); Office closes at 6:00 PM
+  Rate Increase Policy: NOT FOUND
+  RED FLAGS: ["'Starting from $55.00/mo' is a teaser floor price with no unit sizes or ongoing rates clearly mapped to specific prices", "No pricing grid or unit-level pricing visible in scraped text — units listed as 'Call for Availability'", 'No disclosure of what the $55 unit size is — smallest unit size inferred from text mention of 5x5 but not explicitly tied to $55', 'No mention of rate increase policy after move-in', 'No insurance requirements or costs disclosed', 'No admin fee disclosure despite being a common industry fee', 'Ownership structure buried at bottom (licensed operator, not direct StorageMart) — potential accountability gap']
+  Notes: The $55/mo 'starting from' price is the only pricing information available; no per-unit pricing table was present in the scraped text. The facility mentions unit sizes range from 5x5 to 10x30 but does not link specific sizes to specific prices. The 2.5% credit card surcharge is clearly disclosed, which is a positive transparency signal. Consumers should call or visit the website's live unit availability tool to get actual per-unit pricing before committing. No promotional rates, insurance requirements, or rate increase policies are mentioned anywhere in the text.
+
+[3/10] Dillon Self Storage
+  URL: https://www.dillonselfstorage.com
+  Promo Rate: NOT FOUND
+  Ongoing Rate Disclosed: NO
+  Smallest Unit: NOT FOUND @ 85/mo
+  Price Lock: NOT FOUND
+  Admin Fee: NOT FOUND
+  Insurance Required: NOT FOUND — Cost: NOT FOUND
+  Credit Card Fee: NOT FOUND
+  Climate Control: YES
+  Access Hours: 6AM-11PM Saturday-Sunday; weekday hours NOT FOUND
+  Rate Increase Policy: NOT FOUND
+  RED FLAGS: ["'AND UP' pricing language on all unit categories obscures actual rates", 'No unit sizes disclosed for any price tier', 'No complete access hours listed (only weekend hours mentioned)', 'No mention of fees, deposits, or insurance requirements', "Vague 'affordable' marketing language without substantiating prices", 'No clarity on whether listed prices are promotional or ongoing']
+  Notes: The facility lists only floor-price ranges (Small $85+, Medium $125+, Large $165+) with no corresponding unit sizes, making meaningful price comparison impossible. Weekday gate hours are not stated. Two locations exist (West O Street and 3839 Hohensee Drive). A 24-hour on-site kiosk is available. The facility is climate controlled and has electronic gate entry, LED lighting, and security cameras. Consumers should call or visit the site's unit listing page to get actual unit sizes, real per-unit pricing, and any applicable fees before committing.
+
+[3/10] Kiss Self Storage
+  URL: https://www.kissselfstorage.com
+  Promo Rate: NOT FOUND
+  Ongoing Rate Disclosed: NO
+  Smallest Unit: NOT FOUND @ 60/mo
+  Price Lock: NOT FOUND
+  Admin Fee: NOT FOUND
+  Insurance Required: NOT FOUND — Cost: NOT FOUND
+  Credit Card Fee: NOT FOUND
+  Climate Control: NO
+  Access Hours: 24-hour access
+  Rate Increase Policy: NOT FOUND
+  RED FLAGS: ["Starting at prices shown (e.g. 'Small starting at $60') imply a floor price only — actual unit prices not disclosed", 'No specific unit sizes tied to pricing (cannot verify what you actually get for the stated price)', 'No mention of any fees, deposits, or insurance requirements — may surface at lease signing', "Claim of 'best prices in town' is unverifiable marketing language with no supporting price comparison"]
+  Notes: The facility lists three size tiers (Small, Medium, Large) with starting prices of $60, $90, and $144/month respectively, but provides no specific unit dimensions (e.g. 5x5, 10x10) for any tier. No information is given about additional fees, insurance, deposits, or rate increase policies. The site advertises 24-hour access and drive-through units with doors at both ends, and offers outdoor storage for boats, RVs, trailers, and vehicles. Located near Lincoln Airport in Lincoln, NE. Consumers should ask for full pricing disclosure including specific unit sizes, all fees, and any mandatory insurance before committing.
+
+[2/10] Dino's Storage
+  URL: https://www.dinosstorage.com
+  Promo Rate: NOT FOUND
+  Ongoing Rate Disclosed: NO
+  Smallest Unit: NOT FOUND @ $20/mo
+  Price Lock: NOT FOUND
+  Admin Fee: NOT FOUND
+  Insurance Required: NOT FOUND — Cost: NOT FOUND
+  Credit Card Fee: NOT FOUND
+  Climate Control: YES
+  Access Hours: NOT FOUND
+  Rate Increase Policy: NOT FOUND
+  RED FLAGS: ["'Starting at $20' is a teaser price with no unit size or availability disclosed", "'*Prices vary by location' undermines the advertised $20 figure immediately", 'No actual unit sizes or corresponding prices are listed', 'No ongoing monthly rates disclosed anywhere on the page', 'Multiple locations (Omaha, Des Moines, Winnipeg) with a single vague starting price creates ambiguity about what is actually available or at what cost']
+  Notes: This appears to be a regional homepage only. Virtually no actionable pricing information is provided. The '$20 starting at' claim is immediately qualified with a location disclaimer, making it unreliable as a real price anchor. Consumers must click through to individual location pages to find any real pricing, and even then transparency is unconfirmed. The site advertises indoor, outdoor, and climate-controlled options but provides no pricing differentiation between them. Shoppers should treat the $20 figure as a marketing hook rather than a realistic quote.
+
+[2/10] FreeUp Storage Cotner
+  URL: https://www.freeupstorage.com/self-storage/nebraska/lincoln/700-n-cotner-blvd
+  Promo Rate: Up to 50% off for 3 months + free lock (valid on specially marked units at select facilities, new customers only, other restrictions, taxes, and fees may apply)
+  Ongoing Rate Disclosed: NO
+  Smallest Unit: NOT FOUND @ NOT FOUND/mo
+  Price Lock: NOT FOUND
+  Admin Fee: NOT FOUND
+  Insurance Required: NOT FOUND — Cost: NOT FOUND
+  Credit Card Fee: NOT FOUND
+  Climate Control: NO
+  Access Hours: Sunday - Saturday 6:00 AM - 10:00 PM
+  Rate Increase Policy: NOT FOUND
+  RED FLAGS: ['No actual unit prices or monthly rates listed anywhere on the page', "Promotional discount of 'up to 50%' with no baseline price disclosed, making the discount impossible to evaluate", "'Other restrictions, taxes, and fees may apply' — vague catch-all disclaimer", "Promo is only valid on 'specially marked units at select FreeUp Storage Facilities' — no clarity on which units qualify", 'No ongoing monthly rate disclosed after the 3-month promo period ends', "Directions reference facility as 'Homebase Storage-East' rather than FreeUp Storage, suggesting possible rebranding or name inconsistency that could confuse consumers"]
+  Notes: This page contains zero pricing information beyond a vague percentage discount. Consumers have no way to know what they will pay either during or after the promotional period without contacting the facility directly. The facility appears to be outdoor/drive-up only with no climate-controlled units mentioned. Office hours are limited (Mon-Fri only, closed weekends). The facility name discrepancy between 'FreeUp Storage' and 'Homebase Storage-East' appearing in the directions section may indicate a recent acquisition or rebranding and could cause consumer confusion.
+
+[2/10] FreeUp Storage N 1st
+  URL: https://www.freeupstorage.com/self-storage/nebraska/lincoln/1909-n-1st-st
+  Promo Rate: Up to 50% off for 3 months + free lock (valid on specially marked units at select locations, new customers only)
+  Ongoing Rate Disclosed: NO
+  Smallest Unit: NOT FOUND @ NOT FOUND/mo
+  Price Lock: NOT FOUND
+  Admin Fee: NOT FOUND
+  Insurance Required: NOT FOUND — Cost: NOT FOUND
+  Credit Card Fee: NOT FOUND
+  Climate Control: YES
+  Access Hours: Sunday - Saturday 6:00 AM - 10:00 PM
+  Rate Increase Policy: NOT FOUND
+  RED FLAGS: ["'Up to 50% off' language is vague - actual discount amount not specified", "'Specially marked units' qualifier means discount availability is undefined", "'Select FreeUp Storage Facilities' - discount may not apply at this location", "'Other restrictions, taxes, and fees may apply' - unspecified additional costs", 'No unit sizes or base prices listed anywhere on the page', 'No ongoing monthly rates disclosed for any unit type', 'Promotional rate presented prominently but real pricing is completely absent', 'Customer review indicates no-refund policy for early move-out was not disclosed at rental time']
+  Notes: No actual unit prices, sizes, or base rates are published on this page. The prominently advertised '50% off for 3 months' promotion is meaningless to consumers without any disclosed base rates to calculate savings from. A customer review warns that the no-refund-for-early-move-out policy was not disclosed at signing, which is a significant consumer concern. The facility offers temperature-controlled (interior) units, drive-up access, elevator access for upper-floor units, fenced and gated security with cameras, and personalized keycodes. Office hours are Monday-Friday 9:30 AM - 6:00 PM only (closed weekends). Leasing can reportedly be done over the phone.
+
+[2/10] Eagle's Nest Self Storage
+  URL: https://www.eaglesnestselfstorage.com
+  Promo Rate: 50% off first month & a free disk lock for new move-ins
+  Ongoing Rate Disclosed: NO
+  Smallest Unit: NOT FOUND @ NOT FOUND/mo
+  Price Lock: NOT FOUND
+  Admin Fee: NOT FOUND
+  Insurance Required: NOT FOUND — Cost: NOT FOUND
+  Credit Card Fee: NOT FOUND
+  Climate Control: YES
+  Access Hours: NOT FOUND
+  Rate Increase Policy: NOT FOUND
+  RED FLAGS: ['Promotional rate (50% off first month) advertised prominently with no ongoing rate disclosed', 'No unit sizes or prices listed on this page — directs users to click through to locations for pricing', 'No information on what happens to pricing after the promo period ends', 'No mention of fees, deposits, or insurance requirements']
+  Notes: This appears to be a landing/home page that does not display any actual unit pricing or sizes. Consumers must click through to individual location pages to see rates, which are not captured here. The 50% off first month promotion is highlighted but there is zero disclosure of what the standard ongoing monthly rate will be. Two Lincoln, NE locations are mentioned. Facility is family owned and operated. Vehicle parking is also available. Consumers should ask directly about the full monthly rate, any rate increase policies, and all fees before signing a rental agreement.
+
+[1/10] Big Red Self Storage Van Dorn
+  URL: https://www.bigredselfstorage.com/locations/van-dorn
+  Promo Rate: NOT FOUND
+  Ongoing Rate Disclosed: NO
+  Smallest Unit: NOT FOUND @ NOT FOUND/mo
+  Price Lock: NOT FOUND
+  Admin Fee: NOT FOUND
+  Insurance Required: NOT FOUND — Cost: NOT FOUND
+  Credit Card Fee: NOT FOUND
+  Climate Control: YES
+  Access Hours: 7-day access (specific hours NOT FOUND)
+  Rate Increase Policy: NOT FOUND
+  RED FLAGS: ["No pricing of any kind is displayed on the page despite multiple 'View our rates' call-to-action links, suggesting rates are gated behind a click funnel", "Phrase 'flexible leases' is vague and provides no concrete pricing or term commitments", 'No unit sizes or price ranges disclosed anywhere on the page', 'Consumer is directed to find a unit before any pricing information is revealed, a dark pattern common in deceptive pricing practices']
+  Notes: This page is essentially a marketing/landing page with zero pricing transparency. All pricing is hidden behind 'View our rates' or 'Rent online now' links, meaning consumers cannot comparison shop without entering a conversion funnel. Big Red Self Storage operates 8 locations in Lincoln, NE, offering drive-up, climate-controlled, and vehicle storage (uncovered, covered, and indoor). Security features include gated entrances, video surveillance, and on-site staff. '7-day access' is mentioned but specific access hours are not disclosed. The facility is locally owned and operated. Consumers should be cautious and request the full ongoing monthly rate, any administrative fees, and insurance requirements before signing a lease.
+
+[1/10] Big Red Self Storage 46th
+  URL: https://www.bigredselfstorage.com/locations/46th-street
+  Promo Rate: NOT FOUND
+  Ongoing Rate Disclosed: NO
+  Smallest Unit: NOT FOUND @ NOT FOUND/mo
+  Price Lock: NOT FOUND
+  Admin Fee: NOT FOUND
+  Insurance Required: NOT FOUND — Cost: NOT FOUND
+  Credit Card Fee: NOT FOUND
+  Climate Control: YES
+  Access Hours: 7-day access (specific hours NOT FOUND)
+  Rate Increase Policy: NOT FOUND
+  RED FLAGS: ["No pricing of any kind is displayed on the page despite multiple 'View our rates' call-to-action buttons, indicating prices are gated behind a click funnel", "Vague 'flexible leases' language with no terms defined", 'No unit sizes or starting prices listed anywhere on the page']
+  Notes: This page is essentially a marketing landing page with zero pricing transparency. Despite featuring two 'View our rates' buttons, no actual rates, unit sizes, or fees are disclosed on the scraped page. Consumers are required to navigate further into the site or contact the facility to obtain any pricing information. Big Red Self Storage operates 8 locations in Lincoln, NE, and offers drive-up, climate-controlled, indoor, and vehicle storage (uncovered, covered, and indoor). The facility advertises gated entrances, video surveillance, on-site staff, and pest control as security/safety features. Consumers should be prepared to comparison shop carefully, as the complete absence of pricing data on the main page makes cost evaluation impossible without direct inquiry.
+
+[1/10] Lincoln Self Storage
+  URL: https://www.lincolnselfstorage.com
+  Promo Rate: NOT FOUND
+  Ongoing Rate Disclosed: NO
+  Smallest Unit: NOT FOUND @ NOT FOUND/mo
+  Price Lock: NOT FOUND
+  Admin Fee: NOT FOUND
+  Insurance Required: NOT FOUND — Cost: NOT FOUND
+  Credit Card Fee: NOT FOUND
+  Climate Control: NOT FOUND
+  Access Hours: NOT FOUND
+  Rate Increase Policy: NOT FOUND
+  RED FLAGS: ['Page returned a 403 Forbidden error - no pricing or facility information was accessible', 'Content is actively blocked, preventing consumers from viewing any pricing details']
+  Notes: The scraped URL returned a 403 Forbidden HTTP error, meaning access to the page was denied. No facility information, pricing, or terms could be extracted. Consumers should attempt to access the website directly or contact the facility by phone. A 403 error may indicate the site blocks automated access, the page has been removed, or the URL is incorrect. No pricing data of any kind was available for analysis.
+
+[1/10] Mammoth Mega Storage
+  URL: https://www.mammothstorage.com
+  Promo Rate: NOT FOUND
+  Ongoing Rate Disclosed: NO
+  Smallest Unit: NOT FOUND @ NOT FOUND/mo
+  Price Lock: NOT FOUND
+  Admin Fee: NOT FOUND
+  Insurance Required: NOT FOUND — Cost: NOT FOUND
+  Credit Card Fee: NOT FOUND
+  Climate Control: NOT FOUND
+  Access Hours: NOT FOUND
+  Rate Increase Policy: NOT FOUND
+  RED FLAGS: ['Website is inaccessible - domain appears to be for sale on GoDaddy', 'Access denied error returned instead of facility content', 'No pricing or facility information could be retrieved']
+  Notes: The domain www.mammothstorage.com appears to be listed for sale on GoDaddy and is not currently serving a live storage facility website. The scrape returned only an access denied error from Akamai edge servers. No consumer-facing information of any kind is available. Consumers should not attempt to make storage decisions based on this source and should contact the facility directly if it still operates under a different web address or by phone.
+
+[1/10] Sasquatch Self Storage
+  URL: https://www.sasquatchselfstorage.com
+  Promo Rate: NOT FOUND
+  Ongoing Rate Disclosed: NO
+  Smallest Unit: NOT FOUND @ NOT FOUND/mo
+  Price Lock: NOT FOUND
+  Admin Fee: NOT FOUND
+  Insurance Required: NOT FOUND — Cost: NOT FOUND
+  Credit Card Fee: NOT FOUND
+  Climate Control: NO
+  Access Hours: NOT FOUND
+  Rate Increase Policy: NOT FOUND
+  RED FLAGS: ["'Competitive Rates' language used without any actual prices disclosed", 'No unit sizes or pricing of any kind published on the page', 'No fees, deposits, or insurance information disclosed', 'No access hours listed despite marketing storage convenience']
+  Notes: This page contains virtually no pricing information whatsoever. The phrase 'competitive rates' is used as a marketing claim with zero supporting data. Consumers cannot make any informed price comparison from this page. Three locations are listed (201 S Coddington Ave, 2300 NW 9th St, 9520 First Street) but none have individual pricing. Climate control is not mentioned anywhere on the page. Drive-up access and RV/Car/Boat parking are confirmed amenities. Consumers should call or visit to obtain actual rates before committing, and should specifically ask about rate increase policies after move-in.
+
+[1/10] Aardvark Self Storage
+  URL: https://www.aardvarkselfstorage.com
+  Promo Rate: NOT FOUND
+  Ongoing Rate Disclosed: NO
+  Smallest Unit: NOT FOUND @ NOT FOUND/mo
+  Price Lock: NOT FOUND
+  Admin Fee: NOT FOUND
+  Insurance Required: NOT FOUND — Cost: NOT FOUND
+  Credit Card Fee: NOT FOUND
+  Climate Control: NOT FOUND
+  Access Hours: Office hours Monday-Friday 8 AM to 12 PM and 1 PM to 5 PM (unit access hours not specified)
+  Rate Increase Policy: NOT FOUND
+  RED FLAGS: ['No pricing of any kind is displayed on the page', "Vague language such as 'budget-friendly price' and 'affordable' without any actual figures", 'Unit sizes are not listed', 'No disclosure of fees, deposits, or insurance requirements', 'Online payment mentioned but no rate information provided to inform the consumer before renting']
+  Notes: This page is essentially a marketing/branding page with no actionable pricing information. Consumers are given no basis to compare costs before contacting the facility. The facility offers self storage units, outdoor vehicle/RV/boat parking. Office is located at 5800 Arbor Road, Lincoln, NE. Phone: (402) 407-2626. Consumers should call or visit directly to obtain any pricing details.
+
+[1/10] Capitol City Mini Storage
+  URL: https://www.capitolcityministorage.com
+  Promo Rate: NOT FOUND
+  Ongoing Rate Disclosed: NO
+  Smallest Unit: NOT FOUND @ NOT FOUND/mo
+  Price Lock: NOT FOUND
+  Admin Fee: NOT FOUND
+  Insurance Required: NOT FOUND — Cost: NOT FOUND
+  Credit Card Fee: NOT FOUND
+  Climate Control: YES
+  Access Hours: NOT FOUND
+  Rate Increase Policy: NOT FOUND
+  RED FLAGS: ['This is NOT a storage facility website - it is a pay-per-call lead generation/referral platform', 'The website explicitly states it is an independent marketing platform not affiliated with any actual service provider', "Claim of 'Transparent pricing with no hidden fees' is contradicted by the disclaimer stating all pricing is set by unknown third-party providers", 'Domain is listed for sale - site may be operated purely for ad revenue with no legitimate service behind it', "No actual pricing of any kind is disclosed despite claiming 'fair price' and 'transparent pricing'", 'Callers may be connected to unknown, unvetted third parties', 'Calls are recorded and phone numbers harvested for lead generation purposes', 'Phone number (877) 583-1843 connects to unknown third parties, not a specific storage facility']
+  Notes: WARNING: This is not a storage facility website. It is a pay-per-call lead generation platform. No storage unit pricing, availability, unit sizes, or facility details exist on this page. The site admits it is not a service provider and that callers will be connected to unknown third-party contractors. Consumers should avoid calling and instead search directly for verified local storage facilities. Zero pricing transparency because there is no actual facility or pricing to disclose.
+
+[1/10] By-Pass Storage
+  URL: https://www.bypassstorage.com
+  Promo Rate: NOT FOUND
+  Ongoing Rate Disclosed: NO
+  Smallest Unit: NOT FOUND @ NOT FOUND/mo
+  Price Lock: NOT FOUND
+  Admin Fee: NOT FOUND
+  Insurance Required: NOT FOUND — Cost: NOT FOUND
+  Credit Card Fee: NOT FOUND
+  Climate Control: NO
+  Access Hours: Sunday - Saturday 6:00 AM - 8:00 PM
+  Rate Increase Policy: NOT FOUND
+  RED FLAGS: ["No unit prices or rates are listed anywhere on the page despite having a 'Sizes and Prices' section heading", "Vague language 'range of sizes' and 'variety of storage sizes' with zero actual pricing disclosed", "'Sizes and Prices' navigation link appears to exist but no actual pricing data was present in the scraped text"]
+  Notes: This facility mentions a 'Sizes and Prices' section multiple times but no actual pricing data was present in the scraped text. Consumers will need to call (575) 388-2200 to get any pricing information. The facility is family-owned since 1995, is also an authorized U-Haul dealer, offers RV parking, and has on-site managers. Notably, insulated ceilings are mentioned but no explicit climate control is advertised. Office hours differ from access hours - office is closed Sundays and on holidays, while gate access is available daily 6am-8pm.
+
+[1/10] C and G Stor-Away
+  URL: https://www.candgstorage.com
+  Promo Rate: NOT FOUND
+  Ongoing Rate Disclosed: NO
+  Smallest Unit: NOT FOUND @ NOT FOUND/mo
+  Price Lock: NOT FOUND
+  Admin Fee: NOT FOUND
+  Insurance Required: NOT FOUND — Cost: NOT FOUND
+  Credit Card Fee: NOT FOUND
+  Climate Control: NOT FOUND
+  Access Hours: Office hours Monday through Friday 8am to 4pm (unit access hours not stated)
+  Rate Increase Policy: NOT FOUND
+  RED FLAGS: ['No pricing of any kind is disclosed on the page', 'No unit sizes or rates listed', 'No information about fees, deposits, or insurance', "Vague language such as 'storage solution to meet your need' with no specifics"]
+  Notes: This page contains virtually no actionable pricing or unit information. Only confirmed details are: serves Excelsior Springs MO, office open Mon-Fri 8am-4pm, and senior and military discounts are available. Consumers should contact the facility directly to obtain all pricing details before committing. The complete absence of pricing is a significant transparency concern.
+
+
+FACILITIES WITH ERRORS OR NO DATA
+------------------------------------------------------------
+  Superior Street Storage — Could not fetch website
+  Spare Room Storage — Could not fetch website
+  Budget Storage Pioneers — Could not fetch website
+  Northwest Storage — Could not fetch website
+  Always Safe Storage — Could not fetch website
+  Cornhusker Self Storage — Could not fetch website
+  A Economy Self Storage — Could not fetch website
+  A Kimco Self Storage — Could not fetch website
+  Tower View Mini Storage — Could not fetch website
+  Stor-It 4 Less — Could not fetch website

@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrueStore — Lincoln, NE Storage Transparency Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:   #0F1923;
+    --cream:  #F7F4EF;
+    --green:  #22C55E;
+    --amber:  #F59E0B;
+    --red:    #EF4444;
+    --blue:   #3B82F6;
+    --purple: #8B5CF6;
+    --green-bg: #F0FDF4;
+    --amber-bg: #FFFBEB;
+    --red-bg:   #FEF2F2;
+    --purple-bg: #F5F3FF;
+    --muted:  #6B7280;
+    --border: #E5E7EB;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--navy);
+    line-height: 1.6;
+    font-size: 16px;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--navy);
+    color: var(--cream);
+    padding: 80px 24px 72px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(59,130,246,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero h1 span { color: var(--blue); }
+  .hero-sub {
+    font-size: 1.05rem;
+    color: rgba(247,244,239,0.7);
+    max-width: 560px;
+    margin: 0 auto 52px;
+    font-weight: 300;
+  }
+
+  /* METER */
+  .meter-wrap {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 32px 48px;
+  }
+  .meter-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(247,244,239,0.5);
+  }
+  .meter-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--red);
+  }
+  .meter-desc {
+    font-size: 0.85rem;
+    color: rgba(247,244,239,0.6);
+    max-width: 220px;
+    text-align: center;
+  }
+  .meter-bar {
+    width: 220px;
+    height: 6px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .meter-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--red), var(--amber));
+    border-radius: 3px;
+    transition: width 1.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* STATS */
+  .stats {
+    background: white;
+    border-bottom: 1px solid var(--border);
+  }
+  .stats-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+  .stat-item {
+    padding: 28px 16px;
+    text-align: center;
+    border-right: 1px solid var(--border);
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .stat-green  { color: var(--green); }
+  .stat-amber  { color: var(--amber); }
+  .stat-red    { color: var(--red); }
+  .stat-blue   { color: var(--blue); }
+  .stat-purple { color: var(--purple); }
+
+  /* MAIN */
+  .container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* SECTION HEADER */
+  .section-header {
+    padding: 56px 0 24px;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+  .section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  .section-count {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* TIER LABELS */
+  .tier-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 32px 0 16px;
+  }
+  .tier-label-text {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .tier-label-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .tier-green  { color: var(--green); }
+  .tier-amber  { color: var(--amber); }
+  .tier-red    { color: var(--red); }
+  .tier-purple { color: var(--purple); }
+
+  /* CARDS */
+  .cards { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+
+  .card {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: 0 4px 20px rgba(15,25,35,0.08); }
+
+  .card-main {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: stretch;
+  }
+
+  /* Score badge */
+  .score-badge {
+    width: 68px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding: 16px 8px;
+    border-right: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .score-badge.green  { background: var(--green-bg); }
+  .score-badge.amber  { background: var(--amber-bg); }
+  .score-badge.red    { background: var(--red-bg); }
+  .score-badge.purple { background: var(--purple-bg); }
+
+  .score-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .score-denom { font-size: 0.65rem; color: var(--muted); font-weight: 500; }
+  .score-icon  { font-size: 1rem; margin-top: 2px; }
+  .score-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-top: 2px; text-align: center; line-height: 1.2; }
+
+  .score-badge.green  .score-num  { color: var(--green); }
+  .score-badge.amber  .score-num  { color: var(--amber); }
+  .score-badge.red    .score-num  { color: var(--red); }
+  .score-badge.purple .score-num  { color: var(--purple); }
+  .score-badge.purple .score-label { color: var(--purple); }
+
+  /* Card body */
+  .card-body {
+    padding: 14px 18px;
+    min-width: 0;
+  }
+  .card-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .card-meta {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .card-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .pill {
+    font-size: 0.68rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+  .pill-green  { background: var(--green-bg); color: #15803D; }
+  .pill-amber  { background: var(--amber-bg); color: #B45309; }
+  .pill-red    { background: var(--red-bg);   color: #B91C1C; }
+  .pill-blue   { background: #EFF6FF;         color: #1D4ED8; }
+  .pill-gray   { background: #F3F4F6;         color: #374151; }
+  .pill-purple { background: var(--purple-bg); color: #6D28D9; }
+
+  /* Card price */
+  .card-price {
+    padding: 14px 18px 14px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    flex-shrink: 0;
+    min-width: 100px;
+  }
+  .price-from   { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .price-amount { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; line-height: 1.1; color: var(--navy); }
+  .price-unit   { font-size: 0.7rem; color: var(--muted); }
+  .price-na     { font-size: 0.78rem; color: var(--muted); font-style: italic; text-align: right; }
+
+  /* Red flags */
+  .card-flags {
+    border-top: 1px solid var(--border);
+    padding: 10px 18px 10px 86px;
+    background: var(--red-bg);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .flag-item {
+    font-size: 0.72rem;
+    color: #B91C1C;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .flag-item::before { content: '⚠'; font-size: 0.65rem; }
+
+  /* Notes */
+  .card-notes {
+    border-top: 1px solid var(--border);
+    padding: 10px 18px 10px 86px;
+    font-size: 0.78rem;
+    color: var(--muted);
+    background: #FAFAFA;
+    line-height: 1.5;
+  }
+
+  /* Local call-first notes */
+  .card-local-note {
+    border-top: 1px solid #DDD6FE;
+    padding: 10px 18px 10px 86px;
+    font-size: 0.78rem;
+    color: #5B21B6;
+    background: var(--purple-bg);
+    line-height: 1.5;
+  }
+
+  /* LOCAL CALLOUT BOX */
+  .local-callout {
+    background: var(--purple-bg);
+    border: 1px solid #DDD6FE;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 0 0 20px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .local-callout-icon { font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
+  .local-callout-title { font-weight: 700; font-size: 0.95rem; color: #5B21B6; margin-bottom: 6px; }
+  .local-callout-text  { font-size: 0.82rem; color: #4C1D95; line-height: 1.6; }
+  .local-callout-text strong { color: #3B0764; }
+
+  /* CONSUMER TIPS */
+  .tips-section {
+    margin: 48px 0;
+    background: var(--navy);
+    border-radius: 16px;
+    padding: 40px;
+    color: var(--cream);
+  }
+  .tips-section h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; }
+  .tips-intro { font-size: 0.88rem; color: rgba(247,244,239,0.6); margin-bottom: 28px; font-weight: 300; }
+  .tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+  .tip-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 20px; }
+  .tip-icon  { font-size: 1.4rem; margin-bottom: 10px; }
+  .tip-title { font-weight: 700; font-size: 0.88rem; margin-bottom: 6px; color: var(--cream); }
+  .tip-text  { font-size: 0.78rem; color: rgba(247,244,239,0.6); line-height: 1.5; }
+
+  /* NUANCE BOX */
+  .nuance-box {
+    background: #EFF6FF;
+    border: 1px solid #BFDBFE;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 32px 0;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .nuance-icon  { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+  .nuance-title { font-weight: 700; font-size: 0.9rem; color: #1D4ED8; margin-bottom: 6px; }
+  .nuance-text  { font-size: 0.82rem; color: #1E40AF; line-height: 1.6; }
+
+  /* METHODOLOGY */
+  .methodology { border-top: 1px solid var(--border); padding: 40px 0 60px; margin-top: 48px; }
+  .methodology h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; }
+  .methodology p { font-size: 0.8rem; color: var(--muted); line-height: 1.7; max-width: 680px; margin-bottom: 8px; }
+
+  /* FOOTER */
+  .footer { background: var(--navy); color: rgba(247,244,239,0.4); text-align: center; padding: 24px; font-size: 0.75rem; }
+  .footer strong { color: var(--cream); }
+
+  /* FILTER */
+  .filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 4px; padding-top: 8px; }
+  .filter-btn {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 100px;
+    border: 1.5px solid var(--border);
+    background: white;
+    color: var(--navy);
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: 'Inter', sans-serif;
+  }
+  .filter-btn:hover { border-color: var(--navy); }
+  .filter-btn.active { background: var(--navy); color: white; border-color: var(--navy); }
+
+  .hidden { display: none !important; }
+
+  @media (max-width: 600px) {
+    .card-main { grid-template-columns: 68px 1fr; }
+    .card-price { display: none; }
+    .card-flags, .card-notes, .card-local-note { padding-left: 86px; }
+    .stats-inner { grid-template-columns: repeat(2, 1fr); }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
+    .tips-section { padding: 28px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">TrueStore · Lincoln, NE · June 2026</div>
+  <h1>Who's being <span>honest</span> about<br>your storage rate?</h1>
+  <p class="hero-sub">We analyzed 36 storage facilities in Lincoln so you don't sign a lease before you know what month 4 actually costs.</p>
+  <div class="meter-wrap">
+    <div class="meter-label">Fully Transparent Facilities</div>
+    <div class="meter-number" id="meterNum">0%</div>
+    <div class="meter-bar"><div class="meter-fill" id="meterFill"></div></div>
+    <div class="meter-desc">of Lincoln storage facilities clearly disclose ongoing rates upfront</div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat-item"><div class="stat-number stat-blue">36</div><div class="stat-label">Analyzed</div></div>
+    <div class="stat-item"><div class="stat-number stat-green">5</div><div class="stat-label">Transparent</div></div>
+    <div class="stat-item"><div class="stat-number stat-amber">25</div><div class="stat-label">Partial</div></div>
+    <div class="stat-item"><div class="stat-number stat-red">3</div><div class="stat-label">Deceptive</div></div>
+    <div class="stat-item"><div class="stat-number stat-purple">3</div><div class="stat-label">Local / Call-First</div></div>
+    <div class="stat-item"><div class="stat-number" style="color:#6B7280">1</div><div class="stat-label">No Info</div></div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="container">
+
+  <!-- NUANCE BOX -->
+  <div class="nuance-box" style="margin-top:40px;">
+    <div class="nuance-icon">💡</div>
+    <div>
+      <div class="nuance-title">Pricing online isn't the only measure of a good storage facility</div>
+      <div class="nuance-text">A chain with a polished website and deceptive fine print is worse for your wallet than a local operator who simply prefers a phone call. We've separated those two things in this report. <strong>The "Local &amp; Call-First" category is not a red flag</strong> — it's a different kind of facility that may offer you better value and more flexibility than any corporate chain.</div>
+    </div>
+  </div>
+
+  <!-- FILTER -->
+  <div class="section-header">
+    <h2>All Facilities Ranked</h2>
+    <span class="section-count">36 locations</span>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterCards('all', this)">All (36)</button>
+    <button class="filter-btn" onclick="filterCards('green', this)">✅ Transparent (5)</button>
+    <button class="filter-btn" onclick="filterCards('amber', this)">⚠️ Partial (25)</button>
+    <button class="filter-btn" onclick="filterCards('red', this)">🔴 Deceptive (3)</button>
+    <button class="filter-btn" onclick="filterCards('purple', this)">📞 Local / Call-First (3)</button>
+    <button class="filter-btn" onclick="filterCards('gray', this)">⚫ No Info (1)</button>
+  </div>
+
+  <!-- ── GREEN TIER ───────────────────────────────────────────── -->
+  <div class="tier-label tier-green" data-tier-label="green">
+    <span class="tier-label-text">✅ Transparent — Score 7–8 out of 10</span>
+    <div class="tier-label-line"></div>
+  </div>
+  <div class="cards">
+
+    <div class="card" data-tier="green">
+      <div class="card-main">
+        <div class="score-badge green"><div class="score-num">8</div><div class="score-denom">/10</div><div class="score-icon">✅</div></div>
+        <div class="card-body">
+          <div class="card-name">Lincoln Self Storage</div>
+          <div class="card-meta">801 S. Coddington Ave · (402) 435-0085</div>
+          <div class="card-pills">
+            <span class="pill pill-green">Full pricing published</span>
+            <span class="pill pill-green">Month-to-month</span>
+            <span class="pill pill-blue">Climate control</span>
+            <span class="pill pill-blue">Drive-up</span>
+            <span class="pill pill-gray">6am–10pm daily</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-from">from</div><div class="price-amount">$85</div><div class="price-unit">/ mo · 5×10</div></div>
+      </div>
+      <div class="card-notes">Full unit grid: 5×10 $85, 10×10 $130, 10×15 $150, 10×20 $165, 10×20 w/outlet $180, 10×25 $190, 10×30 $235, 10×30 pull-thru $235, 10×40 pull-thru $330. Climate: 10×10 $140, 10×15 $160. No rate-increase language found.</div>
+    </div>
+
+    <div class="card" data-tier="green">
+      <div class="card-main">
+        <div class="score-badge green"><div class="score-num">8</div><div class="score-denom">/10</div><div class="score-icon">✅</div></div>
+        <div class="card-body">
+          <div class="card-name">U-Haul North Lincoln</div>
+          <div class="card-meta">1930 Fletcher Ave · (402) 488-1930</div>
+          <div class="card-pills">
+            <span class="pill pill-green">Full pricing published</span>
+            <span class="pill pill-green">1-Year Price Lock</span>
+            <span class="pill pill-blue">Climate control</span>
+            <span class="pill pill-blue">Drive-up</span>
+            <span class="pill pill-gray">24-hour access</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-from">from</div><div class="price-amount">$69.95</div><div class="price-unit">/ mo · 5×5</div></div>
+      </div>
+      <div class="card-notes">Rate guaranteed for 12 months — the strongest price protection in Lincoln. 5×5 $69.95, 5×10 $89.95, 10×10 $149.95, 10×15 $189.95, 10×20 $219.95.</div>
+    </div>
+
+    <div class="card" data-tier="green">
+      <div class="card-main">
+        <div class="score-badge green"><div class="score-num">8</div><div class="score-denom">/10</div><div class="score-icon">✅</div></div>
+        <div class="card-body">
+          <div class="card-name">U-Haul 48th &amp; Vine</div>
+          <div class="card-meta">740 N 48th St · (402) 467-7700</div>
+          <div class="card-pills">
+            <span class="pill pill-green">Full pricing published</span>
+            <span class="pill pill-green">1-Year Price Lock</span>
+            <span class="pill pill-blue">Climate control</span>
+            <span class="pill pill-blue">Drive-up</span>
+            <span class="pill pill-gray">24-hour access</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-from">from</div><div class="price-amount">$104.95</div><div class="price-unit">/ mo · 5×10</div></div>
+      </div>
+      <div class="card-notes">Rate guaranteed for 12 months. 5×10 $104.95, 10×10 $169.95, 10×15 $199.95, 10×20 $239.95.</div>
+    </div>
+
+    <div class="card" data-tier="green">
+      <div class="card-main">
+        <div class="score-badge green"><div class="score-num">7</div><div class="score-denom">/10</div><div class="score-icon">✅</div></div>
+        <div class="card-body">
+          <div class="card-name">Superior Street Storage</div>
+          <div class="card-meta">4660 N 35th St · (402) 326-3381 · Veteran-owned</div>
+          <div class="card-pills">
+            <span class="pill pill-green">Full pricing published</span>
+            <span class="pill pill-blue">Climate control</span>
+            <span class="pill pill-blue">Drive-up</span>
+            <span class="pill pill-gray">6am–10pm daily</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-from">from</div><div class="price-amount">$89</div><div class="price-unit">/ mo · 5×10</div></div>
+      </div>
+      <div class="card-notes">Drive-up: 5×10 $89, 10×20 $159, 10×25 $179. Climate walk-in: 10×5 $95, 10×9 $128, 8×10 $123, 11.6×10 $157, 10×14 $159. Parking $89/mo. No rate-increase language found.</div>
+    </div>
+
+    <div class="card" data-tier="green">
+      <div class="card-main">
+        <div class="score-badge green"><div class="score-num">7</div><div class="score-denom">/10</div><div class="score-icon">✅</div></div>
+        <div class="card-body">
+          <div class="card-name">Mammoth Mega Storage</div>
+          <div class="card-meta">2223 Fletcher Ave · (402) 300-3114</div>
+          <div class="card-pills">
+            <span class="pill pill-green">Full pricing published</span>
+            <span class="pill pill-green">Month-to-month</span>
+            <span class="pill pill-amber">Large units only</span>
+            <span class="pill pill-blue">Drive-up</span>
+            <span class="pill pill-gray">24-hour access</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-from">from</div><div class="price-amount">$300</div><div class="price-unit">/ mo · 15×25</div></div>
+      </div>
+      <div class="card-notes">Specialized for large items: RVs, boats, trailers, business inventory. Not standard self-storage. 15×25 $300, 15×30 $350, 17×30 $400, 17×50 $650, 21×40 $650, 21×50 $800. Pro-rated first month.</div>
+    </div>
+
+  </div>
+
+  <!-- ── AMBER TIER ───────────────────────────────────────────── -->
+  <div class="tier-label tier-amber" data-tier-label="amber">
+    <span class="tier-label-text">⚠️ Partial Disclosure — Score 4–6 out of 10</span>
+    <div class="tier-label-line"></div>
+  </div>
+  <div class="cards">
+
+    <div class="card" data-tier="amber">
+      <div class="card-main">
+        <div class="score-badge amber"><div class="score-num">6</div><div class="score-denom">/10</div><div class="score-icon">⚠️</div></div>
+        <div class="card-body">
+          <div class="card-name">Northwest Storage</div>
+          <div class="card-meta">6707 NW 48th St · (402) 470-3223</div>
+          <div class="card-pills">
+            <span class="pill pill-green">Pricing published</span>
+            <span class="pill pill-amber">Long-term discount caveat</span>
+            <span class="pill pill-blue">Drive-up</span>
+            <span class="pill pill-gray">24-hour access</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-from">from</div><div class="price-amount">$47.50</div><div class="price-unit">/ mo · 5×8</div></div>
+      </div>
+      <div class="card-flags"><span class="flag-item">Prices may reflect a discount from a longer term agreement</span></div>
+      <div class="card-notes">Wide variety of unusual sizes. Indoor from $47.50 to $236.55. Outdoor parking $35–$105/mo. Confirm month-to-month rate before signing.</div>
+    </div>
+
+    <div class="card" data-tier="amber">
+      <div class="card-main">
+        <div class="score-badge amber"><div class="score-num">6</div><div class="score-denom">/10</div><div class="score-icon">⚠️</div></div>
+        <div class="card-body">
+          <div class="card-name">Dino's Storage — Northern Lights</div>
+          <div class="card-meta">1945 N 84th St · (402) 975-2566</div>
+          <div class="card-pills">
+            <span class="pill pill-green">Pricing published</span>
+            <span class="pill pill-amber">3-tier pricing</span>
+            <span class="pill pill-blue">Climate control</span>
+            <span class="pill pill-gray">6am–10pm daily</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-from">from</div><div class="price-amount">$36</div><div class="price-unit">/ mo · 2×10</div></div>
+      </div>
+      <div class="card-flags">
+        <span class="flag-item">Availability subject to change without notice</span>
+        <span class="flag-item">Three-tier pricing (Base/Best Value/Premium) — confirm which tier applies</span>
+      </div>
+      <div class="card-notes">Climate-controlled only. 5×10 $62–$86, 10×10 $109–$139, 10×15 $131–$165, 10×20 $173–$198, 10×30 $248–$277.</div>
+    </div>
+
+    <div class="card" data-tier="amber">
+      <div class="card-main">
+        <div class="score-badge amber"><div class="score-num">6</div><div class="score-denom">/10</div><div class="score-icon">⚠️</div></div>
+        <div class="card-body">
+          <div class="card-name">Dino's Storage — 601 J St</div>
+          <div class="card-meta">601 J St · (402) 486-3466 · Downtown</div>
+          <div class="card-pills">
+            <span class="pill pill-green">Pricing published</span>
+            <span class="pill pill-amber">3-tier pricing</span>
+            <span class="pill pill-blue">Climate control</span>
+            <span class="pill pill-blue">Outdoor parking</span>
+            <span class="pill pill-gray">6am–10pm daily</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-from">from</div><div class="price-amount">$41</div><div class="price-unit">/ mo · 5×4</div></div>
+      </div>
+      <div class="card-flags">
+        <span class="flag-item">Availability subject to change without notice</span>
+        <span class="flag-item">Three-tier pricing — confirm which tier applies</span>
+      </div>
+      <div class="card-notes">Very wide unit variety. 5×10 $79–$102, 10×10 $135–$157. Best outdoor parking rates in Lincoln: 10×20 $32, 10×30 $48, 10×40 $57, 10×60 $74.</div>
+    </div>
+
+    <div class="card" data-tier="amber">
+      <div class="card-main">
+        <div class="score-badge amber"><div class="score-num">5</div><div class="score-denom">/10</div><div class="score-icon">⚠️</div></div>
+        <div class="card-body">
+          <div class="card-name">Kiss Self Storage</div>
+          <div class="card-meta">6500 NW 42nd St · (402) 475-4003</div>
+          <div class="card-pills">
+            <span class="pill pill-amber">Starting prices shown</span>
+            <span class="pill pill-blue">Drive-up</span>
+            <span class="pill pill-blue">Drive-through units</span>
+            <span class="pill pill-gray">24-hour access</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-from">from</div><div class="price-amount">$60</div><div class="price-unit">/ mo · small</div></div>
+      </div>
+      <div class="card-notes">Small from $60, Medium from $90, Large from $144. Full pricing visible on website in browser. RV/boat/vehicle storage. Near Lincoln Airport.</div>
+    </div>
+
+    <div class="card" data-tier="amber">
+      <div class="card-main">
+        <div class="score-badge amber"><div class="score-num">5</div><div class="score-denom">/10</div><div class="score-icon">⚠️</div></div>
+        <div class="card-body">
+          <div class="card-name">Dillon Self Storage</div>
+          <div class="card-meta">3839 Hohensee Dr · (402) 307-5217</div>
+          <div class="card-pills">
+            <span class="pill pill-amber">Starting prices shown</span>
+            <span class="pill pill-blue">Climate control</span>
+            <span class="pill pill-blue">Drive-up</span>
+            <span class="pill pill-gray">6am–11pm daily</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-from">from</div><div class="price-amount">$85</div><div class="price-unit">/ mo · small</div></div>
+      </div>
+      <div class="card-notes">Small from $85, Medium from $125, Large from $165. New 3-story climate-controlled building open. App-based gate access. Full pricing visible in browser.</div>
+    </div>
+
+    <div class="card" data-tier="amber">
+      <div class="card-main">
+        <div class="score-badge amber"><div class="score-num">5</div><div class="score-denom">/10</div><div class="score-icon">⚠️</div></div>
+        <div class="card-body">
+          <div class="card-name">Mini Storage Space</div>
+          <div class="card-meta">2075 N 86th St · (402) 466-0400 · BBB A+</div>
+          <div class="card-pills">
+            <span class="pill pill-amber">Partial pricing</span>
+            <span class="pill pill-blue">Climate control</span>
+            <span class="pill pill-blue">Drive-up</span>
+            <span class="pill pill-green">BBB A+ Accredited</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-from">from</div><div class="price-amount">$95</div><div class="price-unit">/ mo</div></div>
+      </div>
+      <div class="card-notes">$95–$234/mo range. Indoor vehicle storage available. No boats or RVs. Month-to-month. Northeast Lincoln near Hwy 34.</div>
+    </div>
+
+    <div class="card" data-tier="amber">
+      <div class="card-main">
+        <div class="score-badge amber"><div class="score-num">4</div><div class="score-denom">/10</div><div class="score-icon">⚠️</div></div>
+        <div class="card-body">
+          <div class="card-name">Big Red Self Storage <span style="font-weight:400;color:var(--muted)">(8 Locations)</span></div>
+          <div class="card-meta">Van Dorn · 46th St · Karl Ridge · Custer · Helen Witt · N 27th · Yankee Woods · S 14th</div>
+          <div class="card-pills">
+            <span class="pill pill-amber">Pricing visible in browser</span>
+            <span class="pill pill-green">Locally owned</span>
+            <span class="pill pill-blue">Climate control</span>
+            <span class="pill pill-blue">Drive-up</span>
+            <span class="pill pill-gray">6am–10pm daily</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-from">range</div><div class="price-amount">$54–425</div><div class="price-unit">/ mo</div></div>
+      </div>
+      <div class="card-notes">Locally owned, 8 Lincoln locations. Pricing loads dynamically on website — visible to consumers in browser. Vehicle, RV, boat storage at select locations. Heated units at Van Dorn. Call (402) 477-7900.</div>
+    </div>
+
+    <div class="card" data-tier="amber">
+      <div class="card-main">
+        <div class="score-badge amber"><div class="score-num">4</div><div class="score-denom">/10</div><div class="score-icon">⚠️</div></div>
+        <div class="card-body">
+          <div class="card-name">Sasquatch Self Storage <span style="font-weight:400;color:var(--muted)">(3 Locations)</span></div>
+          <div class="card-meta">201 S Coddington · 2300 NW 9th · 9520 First St, Cheney · (402) 204-5050</div>
+          <div class="card-pills">
+            <span class="pill pill-amber">Pricing visible in browser</span>
+            <span class="pill pill-blue">RV/car/boat parking</span>
+            <span class="pill pill-blue">Drive-up</span>
+            <span class="pill pill-green">Military discounts</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-na">Visit site<br>for pricing</div></div>
+      </div>
+      <div class="card-notes">Three Lincoln-area locations. Military discounts available. Pricing visible on website in browser.</div>
+    </div>
+
+    <div class="card" data-tier="amber">
+      <div class="card-main">
+        <div class="score-badge amber"><div class="score-num">4</div><div class="score-denom">/10</div><div class="score-icon">⚠️</div></div>
+        <div class="card-body">
+          <div class="card-name">FreeUp Storage <span style="font-weight:400;color:var(--muted)">(2 Locations)</span></div>
+          <div class="card-meta">1909 N 1st St · (402) 383-2144 &nbsp;|&nbsp; 700 N Cotner Blvd · (402) 534-1627</div>
+          <div class="card-pills">
+            <span class="pill pill-amber">Pricing visible in browser</span>
+            <span class="pill pill-blue">Climate control</span>
+            <span class="pill pill-blue">Drive-up</span>
+            <span class="pill pill-amber">No early move-out refund</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-from">from</div><div class="price-amount">$62</div><div class="price-unit">/ mo</div></div>
+      </div>
+      <div class="card-flags"><span class="flag-item">No refunds for early move-out — confirmed in customer reviews</span></div>
+      <div class="card-notes">N 1st St from $62/mo, N Cotner from $65/mo. Pricing visible in browser. Note the no-refund policy if you leave early.</div>
+    </div>
+
+    <div class="card" data-tier="amber">
+      <div class="card-main">
+        <div class="score-badge amber"><div class="score-num">4</div><div class="score-denom">/10</div><div class="score-icon">⚠️</div></div>
+        <div class="card-body">
+          <div class="card-name">Eagle's Nest Self Storage</div>
+          <div class="card-meta">3700 Adams St Ste 1 · (402) 325-1253</div>
+          <div class="card-pills">
+            <span class="pill pill-amber">Pricing visible in browser</span>
+            <span class="pill pill-blue">Climate control</span>
+            <span class="pill pill-blue">Drive-up</span>
+            <span class="pill pill-gray">7am–11pm daily</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-na">Visit site<br>for pricing</div></div>
+      </div>
+      <div class="card-notes">Near UNL. Free disc lock for new move-ins. Units have power outlets. Free dollies. Affordable parking options. Pricing visible in browser.</div>
+    </div>
+
+    <div class="card" data-tier="amber">
+      <div class="card-main">
+        <div class="score-badge amber"><div class="score-num">4</div><div class="score-denom">/10</div><div class="score-icon">⚠️</div></div>
+        <div class="card-body">
+          <div class="card-name">Aardvark Self Storage</div>
+          <div class="card-meta">5800 Arbor Rd · (402) 464-5516</div>
+          <div class="card-pills">
+            <span class="pill pill-amber">Pricing visible in browser</span>
+            <span class="pill pill-blue">RV/vehicle parking</span>
+            <span class="pill pill-blue">Drive-up</span>
+            <span class="pill pill-gray">6am–10pm daily</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-na">Visit site<br>for pricing</div></div>
+      </div>
+      <div class="card-notes">Northeast Lincoln near I-80. Ground floor units. Vehicle and RV parking available. Pricing visible in browser.</div>
+    </div>
+
+    <div class="card" data-tier="amber">
+      <div class="card-main">
+        <div class="score-badge amber"><div class="score-num">4</div><div class="score-denom">/10</div><div class="score-icon">⚠️</div></div>
+        <div class="card-body">
+          <div class="card-name">Five Star Storage <span style="font-weight:400;color:var(--muted)">(2 Locations)</span></div>
+          <div class="card-meta">5350 Cornhusker Hwy · 1801 Pioneers Blvd · (402) 464-6351</div>
+          <div class="card-pills">
+            <span class="pill pill-amber">Pricing visible in browser</span>
+            <span class="pill pill-amber">50% off first 3 months promo</span>
+            <span class="pill pill-blue">Indoor parking</span>
+            <span class="pill pill-gray">7am–9pm daily</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-na">Visit site<br>for pricing</div></div>
+      </div>
+      <div class="card-flags"><span class="flag-item">Up to 50% off first 3 months — ask explicitly what month 4 costs before signing</span></div>
+      <div class="card-notes">Multi-state chain. Active promo makes ongoing rate unclear. Pricing visible in browser.</div>
+    </div>
+
+    <div class="card" data-tier="amber">
+      <div class="card-main">
+        <div class="score-badge amber"><div class="score-num">4</div><div class="score-denom">/10</div><div class="score-icon">⚠️</div></div>
+        <div class="card-body">
+          <div class="card-name">Infinity Self Storage</div>
+          <div class="card-meta">1542 S 1st St · (402) 527-6260</div>
+          <div class="card-pills">
+            <span class="pill pill-amber">Pricing visible in browser</span>
+            <span class="pill pill-blue">Climate control</span>
+            <span class="pill pill-blue">RV/boat storage</span>
+            <span class="pill pill-gray">Mon–Fri 8am–5pm office</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-na">Visit site<br>for pricing</div></div>
+      </div>
+      <div class="card-notes">Near downtown Lincoln. Summer student special May–August. RV, boat, vehicle storage. Pricing visible in browser.</div>
+    </div>
+
+    <div class="card" data-tier="amber">
+      <div class="card-main">
+        <div class="score-badge amber"><div class="score-num">4</div><div class="score-denom">/10</div><div class="score-icon">⚠️</div></div>
+        <div class="card-body">
+          <div class="card-name">Always Safe Storage <span style="font-weight:400;color:var(--muted)">— Eagle, NE (nearby)</span></div>
+          <div class="card-meta">23910 Karl Dr, Eagle NE · (402) 781-8082 · ~20 miles from Lincoln</div>
+          <div class="card-pills">
+            <span class="pill pill-amber">Pricing visible in browser</span>
+            <span class="pill pill-blue">Indoor RV/boat/vehicle</span>
+            <span class="pill pill-blue">Drive-thru bays</span>
+            <span class="pill pill-gray">24-hour access</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-na">Visit site<br>for pricing</div></div>
+      </div>
+      <div class="card-notes">Worth the drive for RV/boat/vehicle storage. Every unit door alarmed. 12-foot fencing. Spring special: 50% off first month (3-month minimum). Pricing visible in browser.</div>
+    </div>
+
+  </div>
+
+  <!-- ── RED TIER ───────────────────────────────────────────────── -->
+  <div class="tier-label tier-red" data-tier-label="red">
+    <span class="tier-label-text">🔴 Deceptive Pricing Language — Score 3 out of 10</span>
+    <div class="tier-label-line"></div>
+  </div>
+  <div class="cards">
+
+    <div class="card" data-tier="red">
+      <div class="card-main">
+        <div class="score-badge red"><div class="score-num">3</div><div class="score-denom">/10</div><div class="score-icon">🔴</div></div>
+        <div class="card-body">
+          <div class="card-name">StorageMart — Cornhusker Hwy</div>
+          <div class="card-meta">6101 Cornhusker Hwy · (402) 464-8829</div>
+          <div class="card-pills">
+            <span class="pill pill-red">Rate-change language confirmed</span>
+            <span class="pill pill-red">2.5% CC surcharge</span>
+            <span class="pill pill-red">Mandatory insurance</span>
+            <span class="pill pill-blue">Climate control</span>
+            <span class="pill pill-gray">6am–10pm daily</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-from">from</div><div class="price-amount">$55</div><div class="price-unit">/ mo · 5×5</div></div>
+      </div>
+      <div class="card-flags">
+        <span class="flag-item">Rates subject to change at any time at our discretion</span>
+        <span class="flag-item">2.5% surcharge on all credit card payments</span>
+        <span class="flag-item">Insurance required — $20/mo if you can't provide your own proof</span>
+        <span class="flag-item">Discounts apply to move-in month only</span>
+      </div>
+      <div class="card-notes">Advertised rate may be promotional. Footer fine print confirms rates can increase "at any time at our discretion." Get the guaranteed ongoing rate in writing before signing. Range $55–$316/mo.</div>
+    </div>
+
+    <div class="card" data-tier="red">
+      <div class="card-main">
+        <div class="score-badge red"><div class="score-num">3</div><div class="score-denom">/10</div><div class="score-icon">🔴</div></div>
+        <div class="card-body">
+          <div class="card-name">StorageMart — West O Street</div>
+          <div class="card-meta">2701 W O St · (800) 264-9485</div>
+          <div class="card-pills">
+            <span class="pill pill-red">Rate-change language confirmed</span>
+            <span class="pill pill-red">2.5% CC surcharge</span>
+            <span class="pill pill-red">Mandatory insurance</span>
+            <span class="pill pill-blue">Climate control</span>
+            <span class="pill pill-gray">6am–10pm daily</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-from">from</div><div class="price-amount">$35</div><div class="price-unit">/ mo · parking</div></div>
+      </div>
+      <div class="card-flags">
+        <span class="flag-item">Rates subject to change at any time at our discretion</span>
+        <span class="flag-item">2.5% surcharge on all credit card payments</span>
+        <span class="flag-item">Insurance required — $20/mo if you can't provide your own proof</span>
+        <span class="flag-item">Discounts apply to move-in month only</span>
+      </div>
+      <div class="card-notes">Identical policy to Cornhusker location. Parking spaces 10×18 to 10×38. Near Capitol Beach Lake — convenient if you accept the rate-change risk.</div>
+    </div>
+
+  </div>
+
+  <!-- ── PURPLE / LOCAL CALL-FIRST TIER ─────────────────────────── -->
+  <div class="tier-label tier-purple" data-tier-label="purple">
+    <span class="tier-label-text">📞 Local &amp; Call-First — Independently Verified</span>
+    <div class="tier-label-line"></div>
+  </div>
+
+  <div class="local-callout">
+    <div class="local-callout-icon">🏡</div>
+    <div>
+      <div class="local-callout-title">These are verified locally owned, independent operators</div>
+      <div class="local-callout-text">They don't list prices online — not because they're hiding anything, but because that's how they've always done business. These facilities have been serving Lincoln for 30–40 years. They're not scored on the 1–10 scale because that scale measures web transparency, not value or trustworthiness. <strong>Call them directly.</strong> You have negotiating leverage that you don't have with a chain. Ask: <strong>"What's my rate in month 4?"</strong> and <strong>"Do you price-match?"</strong></div>
+    </div>
+  </div>
+
+  <div class="cards">
+
+    <div class="card" data-tier="purple">
+      <div class="card-main">
+        <div class="score-badge purple">
+          <div class="score-icon" style="font-size:1.6rem;margin:0;">📞</div>
+          <div class="score-label">Local &amp;<br>Call-First</div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Capitol City Storage</div>
+          <div class="card-meta">3 locations: 2905 N 38th · 3250 Huntington · 6341 Burlington · (402) 464-9390</div>
+          <div class="card-pills">
+            <span class="pill pill-purple">Locally owned since 1987</span>
+            <span class="pill pill-purple">Family operated</span>
+            <span class="pill pill-gray">Call for rates</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-na">Call for<br>pricing</div></div>
+      </div>
+      <div class="card-local-note">Founded 1987 by the same local family. Google reviewers say "the owner is a nice and respectful family man who isn't greedy with high storage prices" and "been there 18 years — owners are always available when you call." Three convenient Lincoln locations. No corporate parent. Call and ask for the month-4 rate — they're likely to work with you.</div>
+    </div>
+
+    <div class="card" data-tier="purple">
+      <div class="card-main">
+        <div class="score-badge purple">
+          <div class="score-icon" style="font-size:1.6rem;margin:0;">📞</div>
+          <div class="score-label">Local &amp;<br>Call-First</div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Kimco Self Storage</div>
+          <div class="card-meta">6000 S 56th St · (402) 423-3003 · Owner: Steve Miers</div>
+          <div class="card-pills">
+            <span class="pill pill-purple">Sole proprietorship</span>
+            <span class="pill pill-purple">Owner-operated since 1987</span>
+            <span class="pill pill-blue">U-Haul dealer on site</span>
+            <span class="pill pill-gray">Call for rates</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-na">From $20<br>(aggregator)</div></div>
+      </div>
+      <div class="card-local-note">BBB filing confirms: Sole Proprietorship, owner Steve Miers, in business since 1987. Gmail contact address, no corporate parent. Three Lincoln-area locations. Note: completely unrelated to Kimco Realty (the NYSE-listed REIT) — just a shared name. Aggregators show rates from $20–$350/mo. Call directly for current pricing.</div>
+    </div>
+
+    <div class="card" data-tier="purple">
+      <div class="card-main">
+        <div class="score-badge purple">
+          <div class="score-icon" style="font-size:1.6rem;margin:0;">📞</div>
+          <div class="score-label">Local &amp;<br>Call-First</div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Stor-It 4 Less</div>
+          <div class="card-meta">4216 Progressive Ave · (402) 429-1713</div>
+          <div class="card-pills">
+            <span class="pill pill-purple">Family-owned 30+ years</span>
+            <span class="pill pill-green">10% military/advance discount</span>
+            <span class="pill pill-gray">8×10 to 12×30 units</span>
+            <span class="pill pill-gray">24-hour access</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-na">Call for<br>pricing</div></div>
+      </div>
+      <div class="card-local-note">Family-owned and operated for over 30 years. Explicitly offers 10% discount for advance payment and military/armed services — that's a transparency signal that chains rarely match. No online pricing, but small operators like this are often willing to negotiate. Units 8×10 to 12×30.</div>
+    </div>
+
+  </div>
+
+  <!-- ── GRAY / NO INFO ─────────────────────────────────────────── -->
+  <div class="tier-label" style="color:var(--muted)" data-tier-label="gray">
+    <span class="tier-label-text" style="color:var(--muted)">⚫ Minimal Web Presence — Unable to Score</span>
+    <div class="tier-label-line"></div>
+  </div>
+  <div class="cards">
+
+    <div class="card" data-tier="gray">
+      <div class="card-main">
+        <div class="score-badge" style="background:#F3F4F6;">
+          <div class="score-icon" style="font-size:1.6rem;margin:0;">⚫</div>
+          <div class="score-label" style="color:var(--muted);">No<br>Data</div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Spare Room Storage</div>
+          <div class="card-meta">4101 N 27th St · (402) 437-8321</div>
+          <div class="card-pills">
+            <span class="pill pill-gray">No pricing anywhere online</span>
+            <span class="pill pill-gray">Unstaffed location</span>
+            <span class="pill pill-blue">Drive-up</span>
+            <span class="pill pill-gray">7am–8pm daily</span>
+          </div>
+        </div>
+        <div class="card-price"><div class="price-na">Contact<br>for info</div></div>
+      </div>
+      <div class="card-notes">Minimal web presence. RV storage available. Gated, security cameras. Unstaffed — gate access only. Ownership not confirmed. No pricing found anywhere online. Call (402) 437-8321 before visiting.</div>
+    </div>
+
+  </div>
+
+  <!-- CONSUMER TIPS -->
+  <div class="tips-section">
+    <h2>5 Questions to Ask Before You Sign</h2>
+    <p class="tips-intro">The lease is where storage facilities make their money. Here's how to protect yourself.</p>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-icon">📅</div>
+        <div class="tip-title">"What's my rate in month 4?"</div>
+        <div class="tip-text">The most important question. If the answer differs from what's advertised, that's your red flag. Get the ongoing rate in writing before you sign.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">📈</div>
+        <div class="tip-title">"How often do you raise rates?"</div>
+        <div class="tip-text">Industry average is 8–10% annually. Facilities with "at our discretion" language in the fine print can raise rates anytime with 30 days notice.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🔒</div>
+        <div class="tip-title">"Is there a price lock?"</div>
+        <div class="tip-text">U-Haul offers a 1-year price lock as standard — the gold standard in Lincoln. Ask any facility if they'll match it in writing.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">💳</div>
+        <div class="tip-title">"Are there fees beyond rent?"</div>
+        <div class="tip-text">Watch for: admin/setup fees, mandatory insurance ($15–$20/mo), credit card surcharges (StorageMart charges 2.5%), and required lock purchases.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🤝</div>
+        <div class="tip-title">"Do you price-match?"</div>
+        <div class="tip-text">Powerful with local operators especially. Show them a competitor's rate — many will match or beat it rather than lose the rental.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- METHODOLOGY -->
+  <div class="methodology">
+    <h3>How We Score</h3>
+    <p>TrueStore's transparency score (1–10) measures how clearly a facility discloses real ongoing pricing before a consumer commits. We evaluate: whether ongoing rates are published online, whether rate-increase language appears in fine print, whether fees are disclosed upfront, and whether a price lock exists.</p>
+    <p>A score of 7–8 means a consumer can make a fully informed decision from the website alone. A score of 4–6 means pricing exists and is accessible in a browser, but requires extra steps to confirm the ongoing rate. A score of 3 means pricing is shown but fine print allows rates to change "at any time at our discretion."</p>
+    <p><strong>The "Local &amp; Call-First" category is not scored</strong> — these are verified independently owned operators who prefer phone inquiries over web listings. They are not penalized for this. A family business that has served Lincoln for 35 years and works with customers directly is not comparable to a corporate chain with deceptive fine print, and it would be misleading to rank them the same way.</p>
+    <p style="margin-top:12px;">Data collected June 26, 2026. Prices subject to change — verify before signing. TrueStore is not affiliated with any storage facility.</p>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <strong>TrueStore</strong> — Consumer Price Transparency for Self-Storage &nbsp;·&nbsp; Lincoln, NE &nbsp;·&nbsp; June 2026<br>
+  <span style="margin-top:4px;display:block;">Independent research. Not affiliated with any storage facility. Always verify rates before signing.</span>
+</div>
+
+<script>
+  // Animated meter
+  window.addEventListener('load', () => {
+    const pct = 14;
+    const numEl = document.getElementById('meterNum');
+    const fillEl = document.getElementById('meterFill');
+    setTimeout(() => {
+      fillEl.style.width = pct + '%';
+      let current = 0;
+      const interval = setInterval(() => {
+        current++;
+        numEl.textContent = current + '%';
+        if (current >= pct) clearInterval(interval);
+      }, 80);
+    }, 400);
+  });
+
+  // Filter
+  function filterCards(tier, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    document.querySelectorAll('.card').forEach(card => {
+      const show = tier === 'all' || card.dataset.tier === tier;
+      card.classList.toggle('hidden', !show);
+    });
+
+    document.querySelectorAll('[data-tier-label]').forEach(label => {
+      if (tier === 'all') {
+        label.classList.remove('hidden');
+      } else {
+        label.classList.toggle('hidden', label.dataset.tierLabel !== tier);
+      }
+    });
+
+    // Show/hide local callout box
+    const localCallout = document.querySelector('.local-callout');
+    if (localCallout) {
+      localCallout.classList.toggle('hidden', tier !== 'all' && tier !== 'purple');
+    }
+  }
+</script>
+</body>
+</html>
